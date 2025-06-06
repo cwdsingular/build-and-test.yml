@@ -1,0 +1,109 @@
+apiVersion: instancetype.kubevirt.io/v1beta1
+kind: VirtualMachineClusterInstancetype
+metadata:
+  annotations:
+    instancetype.kubevirt.io/description: |-
+      The N Series provides resources for network intensive DPDK
+      applications, like VNFs.
+
+      *N* is the abbreviation for "Network".
+
+      This series of instancetypes requires nodes capable
+      of running DPDK workloads and being marked with the respective
+      node-role.kubevirt.io/worker-dpdk label as such.
+    kubevirt.io/install-strategy-registry: ''
+    openshift.io/documentation-url: 'https://access.redhat.com'
+    kubevirt.io/install-strategy-version: 'sha256:9b1c209a2adc078536727b74acc467e33314ca3f19e095fab886a607cd9e3de1'
+    instancetype.kubevirt.io/displayName: Network
+    kubevirt.io/install-strategy-identifier: 80bf307bbd2b61f3b2ad7e45e16f6130737ea502
+    kubevirt.io/generation: '10'
+    openshift.io/support-url: 'https://access.redhat.com'
+    openshift.io/provider-display-name: Red Hat
+  creationTimestamp: '2024-12-10T17:39:39Z'
+  generation: 1
+  labels:
+    app.kubernetes.io/part-of: hyperconverged-cluster
+    instancetype.kubevirt.io/vendor: redhat.com
+    instancetype.kubevirt.io/common-instancetypes-version: 1.2.1-22-gc5a9239
+    app.kubernetes.io/version: 4.18.3
+    instancetype.kubevirt.io/cpu: '32'
+    instancetype.kubevirt.io/icon-pf: pficon-network
+    instancetype.kubevirt.io/isolateEmulatorThread: 'true'
+    app.kubernetes.io/component: compute
+    instancetype.kubevirt.io/dedicatedCPUPlacement: 'true'
+    app.kubernetes.io/managed-by: virt-operator
+    instancetype.kubevirt.io/version: '1'
+    instancetype.kubevirt.io/class: network
+    instancetype.kubevirt.io/hugepages: 'true'
+    instancetype.kubevirt.io/size: 4xlarge
+    instancetype.kubevirt.io/memory: 64Gi
+  managedFields:
+    - apiVersion: instancetype.kubevirt.io/v1beta1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:kubevirt.io/install-strategy-identifier': {}
+            'f:kubevirt.io/install-strategy-version': {}
+            'f:instancetype.kubevirt.io/displayName': {}
+            'f:kubevirt.io/generation': {}
+            .: {}
+            'f:openshift.io/support-url': {}
+            'f:openshift.io/provider-display-name': {}
+            'f:instancetype.kubevirt.io/description': {}
+            'f:kubevirt.io/install-strategy-registry': {}
+            'f:openshift.io/documentation-url': {}
+          'f:labels':
+            'f:instancetype.kubevirt.io/cpu': {}
+            'f:instancetype.kubevirt.io/icon-pf': {}
+            'f:instancetype.kubevirt.io/isolateEmulatorThread': {}
+            'f:instancetype.kubevirt.io/dedicatedCPUPlacement': {}
+            'f:app.kubernetes.io/managed-by': {}
+            'f:instancetype.kubevirt.io/size': {}
+            'f:instancetype.kubevirt.io/memory': {}
+            .: {}
+            'f:app.kubernetes.io/part-of': {}
+            'f:instancetype.kubevirt.io/vendor': {}
+            'f:instancetype.kubevirt.io/class': {}
+            'f:instancetype.kubevirt.io/version': {}
+            'f:instancetype.kubevirt.io/hugepages': {}
+            'f:instancetype.kubevirt.io/common-instancetypes-version': {}
+            'f:app.kubernetes.io/version': {}
+            'f:app.kubernetes.io/component': {}
+        'f:spec':
+          .: {}
+          'f:annotations':
+            .: {}
+            'f:cpu-load-balancing.crio.io': {}
+            'f:cpu-quota.crio.io': {}
+            'f:irq-load-balancing.crio.io': {}
+          'f:cpu':
+            .: {}
+            'f:dedicatedCPUPlacement': {}
+            'f:guest': {}
+            'f:isolateEmulatorThread': {}
+          'f:memory':
+            .: {}
+            'f:guest': {}
+            'f:hugepages':
+              .: {}
+              'f:pageSize': {}
+      manager: virt-operator
+      operation: Update
+      time: '2025-05-14T09:01:31Z'
+  name: n1.4xlarge
+  resourceVersion: '1923345989'
+  uid: 4d3ddbcc-afa4-4e29-948f-f420eaf71aa7
+spec:
+  annotations:
+    cpu-load-balancing.crio.io: disable
+    cpu-quota.crio.io: disable
+    irq-load-balancing.crio.io: disable
+  cpu:
+    dedicatedCPUPlacement: true
+    guest: 32
+    isolateEmulatorThread: true
+  memory:
+    guest: 64Gi
+    hugepages:
+      pageSize: 1Gi
