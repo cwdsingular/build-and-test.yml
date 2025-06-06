@@ -1,0 +1,88 @@
+apiVersion: instancetype.kubevirt.io/v1beta1
+kind: VirtualMachineClusterInstancetype
+metadata:
+  annotations:
+    instancetype.kubevirt.io/description: |-
+      The M Series provides resources for memory intensive
+      applications.
+
+      *M* is the abbreviation of "Memory".
+    kubevirt.io/install-strategy-registry: ''
+    openshift.io/documentation-url: 'https://access.redhat.com'
+    kubevirt.io/install-strategy-version: 'sha256:9b1c209a2adc078536727b74acc467e33314ca3f19e095fab886a607cd9e3de1'
+    instancetype.kubevirt.io/displayName: Memory Intensive
+    kubevirt.io/install-strategy-identifier: 80bf307bbd2b61f3b2ad7e45e16f6130737ea502
+    kubevirt.io/generation: '10'
+    openshift.io/support-url: 'https://access.redhat.com'
+    openshift.io/provider-display-name: Red Hat
+  creationTimestamp: '2024-12-10T17:39:38Z'
+  generation: 1
+  labels:
+    app.kubernetes.io/part-of: hyperconverged-cluster
+    instancetype.kubevirt.io/vendor: redhat.com
+    instancetype.kubevirt.io/common-instancetypes-version: 1.2.1-22-gc5a9239
+    app.kubernetes.io/version: 4.18.3
+    instancetype.kubevirt.io/cpu: '8'
+    instancetype.kubevirt.io/icon-pf: fa-memory
+    app.kubernetes.io/component: compute
+    app.kubernetes.io/managed-by: virt-operator
+    instancetype.kubevirt.io/version: '1'
+    instancetype.kubevirt.io/class: memory.intensive
+    instancetype.kubevirt.io/hugepages: 'true'
+    instancetype.kubevirt.io/size: 2xlarge
+    instancetype.kubevirt.io/memory: 64Gi
+  managedFields:
+    - apiVersion: instancetype.kubevirt.io/v1beta1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:kubevirt.io/install-strategy-identifier': {}
+            'f:kubevirt.io/install-strategy-version': {}
+            'f:instancetype.kubevirt.io/displayName': {}
+            'f:kubevirt.io/generation': {}
+            .: {}
+            'f:openshift.io/support-url': {}
+            'f:openshift.io/provider-display-name': {}
+            'f:instancetype.kubevirt.io/description': {}
+            'f:kubevirt.io/install-strategy-registry': {}
+            'f:openshift.io/documentation-url': {}
+          'f:labels':
+            'f:instancetype.kubevirt.io/cpu': {}
+            'f:instancetype.kubevirt.io/icon-pf': {}
+            'f:app.kubernetes.io/managed-by': {}
+            'f:instancetype.kubevirt.io/size': {}
+            'f:instancetype.kubevirt.io/memory': {}
+            .: {}
+            'f:app.kubernetes.io/part-of': {}
+            'f:instancetype.kubevirt.io/vendor': {}
+            'f:instancetype.kubevirt.io/class': {}
+            'f:instancetype.kubevirt.io/version': {}
+            'f:instancetype.kubevirt.io/hugepages': {}
+            'f:instancetype.kubevirt.io/common-instancetypes-version': {}
+            'f:app.kubernetes.io/version': {}
+            'f:app.kubernetes.io/component': {}
+        'f:spec':
+          .: {}
+          'f:cpu':
+            .: {}
+            'f:guest': {}
+          'f:memory':
+            .: {}
+            'f:guest': {}
+            'f:hugepages':
+              .: {}
+              'f:pageSize': {}
+      manager: virt-operator
+      operation: Update
+      time: '2025-05-14T09:01:31Z'
+  name: m1.2xlarge
+  resourceVersion: '1923345761'
+  uid: bba2916a-9b41-47a0-a03c-790a56998e5a
+spec:
+  cpu:
+    guest: 8
+  memory:
+    guest: 64Gi
+    hugepages:
+      pageSize: 2Mi
