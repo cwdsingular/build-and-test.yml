@@ -1,8 +1,6 @@
 = Getting Started with JBoss EAP 7 on OpenShift
-
-
 == The Application
-The `src/main` folder contains a simple 'Hello world' style Jakarta EE application using JAX-RS.
+The folder contains a simple 'Hello world' style Jakarta EE application using JAX-RS.
 
 == Deploying the Quickstart
 Make sure you have done all the https://github.com/jboss-eap-up-and-running/docs/blob/main/RUNNING_ON_OPENSHIFT.adoc#prerequisites[prerequisites] and https://github.com/jboss-eap-up-and-running/docs/blob/main/RUNNING_ON_OPENSHIFT.adoc#selecting_creating_a_project[selected/created a project].
