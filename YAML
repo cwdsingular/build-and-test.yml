@@ -1,0 +1,112 @@
+apiVersion: instancetype.kubevirt.io/v1beta1
+kind: VirtualMachineClusterInstancetype
+metadata:
+  annotations:
+    instancetype.kubevirt.io/description: |-
+      The CX Series provides exclusive compute resources for compute
+      intensive applications.
+
+      *CX* is the abbreviation of "Compute Exclusive".
+
+      The exclusive resources are given to the compute threads of the
+      VM. In order to ensure this, some additional cores (depending
+      on the number of disks and NICs) will be requested to offload
+      the IO threading from cores dedicated to the workload.
+      In addition, in this series, the NUMA topology of the used
+      cores is provided to the VM.
+    kubevirt.io/install-strategy-registry: ''
+    openshift.io/documentation-url: 'https://access.redhat.com'
+    kubevirt.io/install-strategy-version: 'sha256:9b1c209a2adc078536727b74acc467e33314ca3f19e095fab886a607cd9e3de1'
+    instancetype.kubevirt.io/displayName: Compute Exclusive
+    kubevirt.io/install-strategy-identifier: 80bf307bbd2b61f3b2ad7e45e16f6130737ea502
+    kubevirt.io/generation: '10'
+    openshift.io/support-url: 'https://access.redhat.com'
+    openshift.io/provider-display-name: Red Hat
+  creationTimestamp: '2024-12-10T17:39:37Z'
+  generation: 1
+  labels:
+    app.kubernetes.io/part-of: hyperconverged-cluster
+    instancetype.kubevirt.io/vendor: redhat.com
+    instancetype.kubevirt.io/common-instancetypes-version: 1.2.1-22-gc5a9239
+    app.kubernetes.io/version: 4.18.3
+    instancetype.kubevirt.io/cpu: '32'
+    instancetype.kubevirt.io/icon-pf: pficon-registry
+    instancetype.kubevirt.io/isolateEmulatorThread: 'true'
+    app.kubernetes.io/component: compute
+    instancetype.kubevirt.io/dedicatedCPUPlacement: 'true'
+    app.kubernetes.io/managed-by: virt-operator
+    instancetype.kubevirt.io/numa: 'true'
+    instancetype.kubevirt.io/version: '1'
+    instancetype.kubevirt.io/class: compute.exclusive
+    instancetype.kubevirt.io/hugepages: 'true'
+    instancetype.kubevirt.io/size: 8xlarge
+    instancetype.kubevirt.io/memory: 64Gi
+  managedFields:
+    - apiVersion: instancetype.kubevirt.io/v1beta1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:kubevirt.io/install-strategy-identifier': {}
+            'f:kubevirt.io/install-strategy-version': {}
+            'f:instancetype.kubevirt.io/displayName': {}
+            'f:kubevirt.io/generation': {}
+            .: {}
+            'f:openshift.io/support-url': {}
+            'f:openshift.io/provider-display-name': {}
+            'f:instancetype.kubevirt.io/description': {}
+            'f:kubevirt.io/install-strategy-registry': {}
+            'f:openshift.io/documentation-url': {}
+          'f:labels':
+            'f:instancetype.kubevirt.io/cpu': {}
+            'f:instancetype.kubevirt.io/icon-pf': {}
+            'f:instancetype.kubevirt.io/isolateEmulatorThread': {}
+            'f:instancetype.kubevirt.io/numa': {}
+            'f:instancetype.kubevirt.io/dedicatedCPUPlacement': {}
+            'f:app.kubernetes.io/managed-by': {}
+            'f:instancetype.kubevirt.io/size': {}
+            'f:instancetype.kubevirt.io/memory': {}
+            .: {}
+            'f:app.kubernetes.io/part-of': {}
+            'f:instancetype.kubevirt.io/vendor': {}
+            'f:instancetype.kubevirt.io/class': {}
+            'f:instancetype.kubevirt.io/version': {}
+            'f:instancetype.kubevirt.io/hugepages': {}
+            'f:instancetype.kubevirt.io/common-instancetypes-version': {}
+            'f:app.kubernetes.io/version': {}
+            'f:app.kubernetes.io/component': {}
+        'f:spec':
+          .: {}
+          'f:cpu':
+            .: {}
+            'f:dedicatedCPUPlacement': {}
+            'f:guest': {}
+            'f:isolateEmulatorThread': {}
+            'f:numa':
+              .: {}
+              'f:guestMappingPassthrough': {}
+          'f:ioThreadsPolicy': {}
+          'f:memory':
+            .: {}
+            'f:guest': {}
+            'f:hugepages':
+              .: {}
+              'f:pageSize': {}
+      manager: virt-operator
+      operation: Update
+      time: '2025-05-14T09:01:31Z'
+  name: cx1.8xlarge
+  resourceVersion: '1923345744'
+  uid: cf1bfc2a-057b-4b03-9554-aa0c1caa9e35
+spec:
+  cpu:
+    dedicatedCPUPlacement: true
+    guest: 32
+    isolateEmulatorThread: true
+    numa:
+      guestMappingPassthrough: {}
+  ioThreadsPolicy: auto
+  memory:
+    guest: 64Gi
+    hugepages:
+      pageSize: 2Mi
